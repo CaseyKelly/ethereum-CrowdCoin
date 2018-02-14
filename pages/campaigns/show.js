@@ -34,7 +34,16 @@ class CampaignShow extends Component {
         meta: 'Address of Manager',
         description:
           'The manager created this campaign and can create requests to withdraw funds.',
-        style: { overflowWrap: 'break-word' }
+        style: { overflowWrap: 'break-word' },
+        extra: (
+          <a
+            href={`https://rinkeby.etherscan.io/address/${manager}`}
+            target="_blank"
+            style={{ color: 'blue' }}
+          >
+            View campaign manager on Etherscan.io
+          </a>
+        )
       },
       {
         header: minimumContribution,
@@ -46,7 +55,7 @@ class CampaignShow extends Component {
         header: requestsCount,
         meta: 'Number of Requests',
         description:
-          'A request tries to withdraw funds from the contract. Requests must be approved by at least half of the approvers.'
+          'A request tries to withdraw funds from the contract. Requests must be approved by at least half of the contributors.'
       },
       {
         header: approversCount,
