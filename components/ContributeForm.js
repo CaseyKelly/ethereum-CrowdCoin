@@ -9,7 +9,6 @@ class ContributeForm extends Component {
 
   onSubmit = event => {
     event.preventDefault();
-
     const campaign = Campaign(this.props.address);
   };
 
